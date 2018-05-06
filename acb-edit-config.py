@@ -1,4 +1,4 @@
-import sys, os
+import sys
 from backend import main
 
 
