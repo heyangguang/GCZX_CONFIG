@@ -1,6 +1,6 @@
 import re, os
 import xml.dom.minidom
-import codecs, time
+import codecs
 
 class Edit_Congif(object):
 
