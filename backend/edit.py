@@ -13,14 +13,14 @@ class Edit_Congif(object):
         '''find_str 接收参数，查找关键字更改内容'''
         data = ''
         # /Users/heyang/expert/WEB-INF/classes/jeesite.properties
-        with open('%s' %self.location, 'r+') as f:
+        with open('%s' %self.location, 'r+', encoding='utf-8') as f:
             for line in f.readlines():
                 # cas.server.url
                 # print(line)
                 if (line.find('%s' %self.find_str) == 0):
                     line = '%s=%s' % (self.find_str,self.new_str,) + '\n'
                 data += line
-        with open('%s' %self.location, 'r+') as f:
+        with open('%s' %self.location, 'r+', encoding='utf-8') as f:
             #time.sleep(0.01)
             f.writelines(data)
 
@@ -98,6 +98,6 @@ class Edit_Congif(object):
             lines.insert(lines.index('<set>') + 1, new)
 
         s = '\n'.join(lines)
-        fp = open(self.location, 'w')
+        fp = open(self.location, 'w', encoding='utf-8')
         fp.write(s)
         fp.close()
