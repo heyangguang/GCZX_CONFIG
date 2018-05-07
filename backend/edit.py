@@ -78,7 +78,7 @@ class Edit_Congif(object):
         dom.writexml(f, addindent='  ', newl='\n', encoding='utf-8')
         f.close()
 
-        fp = open(self.location, 'r')
+        fp = open(self.location, 'r', encoding='utf-8')
         lines = []
         for line in fp:  # 内置的迭代器, 效率很高
             lines.append(line.strip())
