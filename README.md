@@ -1,4 +1,4 @@
-# JHGX_CONFIG
+# GCZX_CONFIG
 开发语言：python3
 
 
